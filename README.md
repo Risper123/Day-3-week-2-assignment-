@@ -19,3 +19,14 @@ def calculate_discount(price, discount_percent):
         return price
         
 Using the calculate_discount function, prompt the user to enter the original price of an item and the discount percentage. Print the final price after applying the discount, or if no discount was applied, print the original price
+
+ # Calculate and print the final price
+    final_price = calculate_discount(original_price, discount_percentage)
+    
+    if final_price == original_price:
+        print(f"No discount applied. The original price is: ${original_price:.2f}")
+    else:
+        print(f"After applying the discount, the final price is: ${final_price:.2f}")
+except ValueError:
+    print("Invalid input! Please enter numeric values for the price and discount percentage.")
+    
